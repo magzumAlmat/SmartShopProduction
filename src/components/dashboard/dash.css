@@ -1,0 +1,47 @@
+.products {
+    background-color: #fff0e7;
+    padding: 50px 0; }
+    .products .options select {
+      border-radius: 0;
+      color: #6d6d6d;
+      border: 1px solid #ebebeb;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: relative;
+      background: #fff url(../src/img/down-arrow.png) no-repeat center right 10px;
+      background-size: 12px; }
+      .products .options select:focus {
+        border-color: #b8b8b8;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #333; }
+    .products .card {
+      border: 0;
+      border-radius: 0;
+      margin: 20px 0; }
+      .products .card .price {
+        margin-bottom: 8px;
+        color: #002f6d;
+        font-weight: 700; }
+      .products .card .card-title {
+        font-size: 17px; }
+    .products ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 13px; }
+    .products .sizes li {
+      display: inline-block;
+      margin-right: 5px;
+      padding: 5px;
+      border: 1px solid #e6e6e6; }
+    .products .pagination-nav {
+      width: 100%; }
+      .products .pagination-nav .page-item.active .page-link {
+        background-color: #ff4372;
+        border-color: #ff4372; }
+      .products .pagination-nav .page-link {
+        border-radius: 0 !important; }
+        .products .pagination-nav .page-link:hover {
+          background-color: #ffdbe4; }
