@@ -103,7 +103,7 @@ class Products extends Component {
       return  <>
       {this.state.newArray.map(product => (
         <Product product={product} key={product.id}  />
-        ) )};
+        ) )}
       </> 
   }
   
@@ -134,14 +134,14 @@ class Products extends Component {
               <Button value="headphones">НАУШНИКИ</Button>
             </NavItem>
             <NavItem>
-              <Button value="accessoires">АКСЕССУАРЫ</Button>
+              <Button value="accessories">АКСЕССУАРЫ</Button>
             </NavItem>
             <NavItem>
               <Button value="technique">ТЕХНИКА</Button>
             </NavItem>
 
             </Nav>
-            </Container>
+          </Container>
 
 
 
@@ -178,7 +178,7 @@ class Products extends Component {
         
          :this.state.pickedCategory ==='smartwatches' ? this.getFilteredProducts()
          :this.state.pickedCategory ==='headphones' ?  this.getFilteredProducts()
-         :this.state.pickedCategory ==='accessoires' ? this.getFilteredProducts()
+         :this.state.pickedCategory === 'accessories' ? this.getFilteredProducts()
          :this.state.pickedCategory ==='technique' ?  this.getFilteredProducts()
 
          
@@ -192,7 +192,7 @@ class Products extends Component {
           </Row>
           </Container>
         </>
-      );
+      )
     } else {
       return <Spinner />;
     }
