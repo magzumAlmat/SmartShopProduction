@@ -10,7 +10,19 @@ import Spinner from '../layout/Spinner';
 import { Container, Row, Col } from 'reactstrap';
 
 import { Nav, NavItem, NavLink,Button } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Text,
 
+
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 class Products extends Component {
   state = {
     products: [],
@@ -115,7 +127,15 @@ class Products extends Component {
       return (
 
         <>
+          
         <Container>
+      
+
+
+        
+
+
+
           <Nav onClick={this.selectCategory} >
 
             <NavItem>
@@ -139,8 +159,12 @@ class Products extends Component {
             <NavItem>
               <Button value="technique">ТЕХНИКА</Button>
             </NavItem>
-
+            <NavItem>
+        
+            </NavItem>
+           
             </Nav>
+        
           </Container>
 
 
@@ -158,12 +182,35 @@ class Products extends Component {
 
 
 <Container>
-          <Row>
+<Breadcrumb>
+<Col xs="2">
+
+        <BreadcrumbItem><a href="/">Главная</a></BreadcrumbItem>
+      
+        {/* <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+        <BreadcrumbItem active>Data</BreadcrumbItem> */}
+      
+       
+          </Col>
           <Col xs="2">
-           filter
+          <p>Filters</p>
+     
+          </Col>
+          </Breadcrumb>
+
+
+
+
+      
+          <Col xs="2">
+          
        
             </Col>
-          <Col xs="10">
+            <Col xs="10">
+      
+       
+            </Col>
+
             <Row>
             
               {/* {this.state.pageOfItems.map(product => (
@@ -172,7 +219,7 @@ class Products extends Component {
               
               ))} */}
     
-   { this.state.pickedCategory ==='smartphone' ? this.getFilteredProducts()
+        { this.state.pickedCategory ==='smartphone' ? this.getFilteredProducts()
          :this.state.pickedCategory ==='pads' ?  this.getFilteredProducts()
          :this.state.pickedCategory ==='notebooks' ? this.getFilteredProducts()
         
@@ -182,14 +229,17 @@ class Products extends Component {
          :this.state.pickedCategory ==='technique' ?  this.getFilteredProducts()
 
          
-         : "Other"
+         : <h1>БАННЕР</h1>
        }
             
-              <Pagination items={products} onChangePage={this.onChangePage} />
+          <Pagination items={products} onChangePage={this.onChangePage} />
               
           </Row>
-          </Col>
-          </Row>
+        
+          
+
+
+
           </Container>
         </>
       )

@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 
 import {Col} from 'reactstrap'
 import { Card, CardImg, CardText, CardBody,CardLink,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+  CardTitle, CardSubtitle, Button,Row } from 'reactstrap';
 const styles = theme => ({
   // close: {
   //   width: theme.spacing.unit * 4,
@@ -106,16 +106,21 @@ class Product extends Component {
  */}
 
 
-<Col>
+         
+          <Col xs="3">
+
+
+
         <Card>
         {/* {product} */}
           <CardImg top
-          style={{'width':'18rem'}}
+          style={{'width':'14rem','margin-top':'1rem'}}
             className="card-img-top img-fluid "
             src={product.url}
             alt={product.name}
            
           />
+          <hr/>
           <CardBody>
           <CardTitle>{product.Category.value}</CardTitle>
           <CardSubtitle>{product.name}</CardSubtitle>
@@ -129,7 +134,7 @@ class Product extends Component {
             <Button
                 className="btn-custom"
                 onClick={this.addClick.bind(this, product)}>
-                Add to cart
+                В корзину
               </Button>
              
             
@@ -152,7 +157,11 @@ class Product extends Component {
 
 
 
-        <Snackbar
+
+      </Col>
+
+
+      <Snackbar
           anchorOrigin={{
             vertical: 'bottom',
             horizontal: 'left'
@@ -176,7 +185,6 @@ class Product extends Component {
             </IconButton>
           ]}
         />
-      </Col>
       </>
 
     );

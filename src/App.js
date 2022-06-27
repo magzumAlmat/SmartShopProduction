@@ -12,7 +12,7 @@ import Profile from './components/profile/Profile'
 // import Product from './components/projects/Product';
 import Products from './components/projects/Products';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Cart from './components/cart/Cart';

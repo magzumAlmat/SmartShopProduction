@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signUp } from '../../store/actions/authActions'
-
+import ReCAPTCHA from './ReCaptha'
 class SignUp extends Component {
     state = {
         email: '',
@@ -48,8 +48,9 @@ class SignUp extends Component {
                         <label htmlFor="lastName">Last Name</label>
                         <input type="text" id="lastName" onChange={this.handleChange} />
                     </div>
+                    <ReCAPTCHA/>
                     <div className="input-field">
-                        <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
+                        <button className="btn pink lighten-1 z-depth-0" >Sign Up</button>
                         <div className="red-text center">
                             { authError ? <p>{ authError }</p> : null }
                         </div>

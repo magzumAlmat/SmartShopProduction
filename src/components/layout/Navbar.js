@@ -6,6 +6,18 @@ import { connect } from 'react-redux';
 import CartIcon from '../cart/CartIcon'
 import Cart from '../cart/Cart';
 import { useHistory } from "react-router-dom";
+import {
+    Collapse,
+  
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem } from 'reactstrap';
 
 // import Cart from '../cart/Cart'
 
@@ -15,7 +27,8 @@ const Navbar = (props) => {
     const { auth, profile } = props;
     const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
     return (
-        <nav className="nav-wrapper grey darken-3">
+        <>
+        <nav className="nav-wrapper">
             <div className="container">
                 <Link to='/' className="brand-logo"></Link>
                
@@ -34,6 +47,11 @@ const Navbar = (props) => {
             </div>
            
         </nav>
+
+       
+    
+        </>
+            
     );
 }
 
