@@ -99,7 +99,7 @@ class Pagination extends React.Component {
     }
 
     return (
-      <nav className="pagination-nav" aria-label="Page navigation">
+      <nav className="pagination-nav fixed-bottom " aria-label="Page navigation" style={{'background-color':'rgba(21, 21, 21, 1)'}}>
         <ul className="pagination justify-content-center">
           <li
             className={`page-item ${pager.currentPage === 1 ? 'disabled' : ''}`}
@@ -119,7 +119,7 @@ class Pagination extends React.Component {
             </a>
           </li>
           {pager.pages.map((page, index) => (
-            <li
+            <li style={{'background-color':'rgba(21, 21, 21, 1)'}}
               key={index}
               className={`page-item ${
                 pager.currentPage === page ? 'active' : ''

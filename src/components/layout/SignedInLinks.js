@@ -7,9 +7,10 @@ import SearchInput from './SearchInput';
 // import SearchButton from './SearchButton';
 
 class SignedInLinks extends Component{
+
     componentDidMount(){
         let elems = document.querySelectorAll('.dropdown-trigger');
-        M.Dropdown.init(elems, {inDuration: 300, outDuration: 225, alignment: 'right', coverTrigger: false});
+        M.Dropdown.init(elems, {inDuration: 500, outDuration: 225, alignment: 'right', coverTrigger: false});
     }
 
     render(){
@@ -17,18 +18,18 @@ class SignedInLinks extends Component{
             <ul className="right">
                 
                 <li>
-                    <NavLink to="/showorders">ORDERS</NavLink>
+                    <NavLink to="/showorders">ALL ORDERS</NavLink>
                 </li>
 
                 <li>
-                    <NavLink to="/createproduct">New Prod</NavLink>
+                    <NavLink to="/createproduct">ADD PRODUCT</NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <SearchInput />
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                     <NavLink to="/create">New Project</NavLink>
-                </li>
+                </li> */}
                 <li>
                     <a onClick={this.props.signOut} href={() => false}>Log Out</a>
                 </li>

@@ -20,7 +20,7 @@ import { createOrderAction } from '../../store/actions/createOrderAction';
 import { useState } from "react";
 import CustomSelect from '../projects/SelectPayOption';
 import { ContactSupportOutlined } from '@material-ui/icons';
-
+import { CardImg } from 'reactstrap';
 class CreateOrder extends Component {
 
     
@@ -44,6 +44,7 @@ class CreateOrder extends Component {
 
           
           const {cartItems}=this.props.location.params;
+          console.log('cartItems ',cartItems)
          
           const  handleChange = (e) => {
                 
@@ -148,13 +149,20 @@ class CreateOrder extends Component {
                                 <tr key={uuid()}>
                                 
                                 <td><div>
-                                        <img
+                                <CardImg top
+                                            style={{'width':'2rem','margin-top':'1rem'}}
+                                                className="mr-3 "
+                                                src={item.url}
+                                                alt="Generic placeholder"
+                                            
+                                            />
+                                        {/* <img
                                             width={64}
                                             height={64}
                                             className="mr-3"
-                                            src={item.picture}
+                                            src={item.url}
                                             alt="Generic placeholder"
-                                        />
+                                        /> */}
                                         <div>
                                             <h5>{item.name}</h5>
                                            

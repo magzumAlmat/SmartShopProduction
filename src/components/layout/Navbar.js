@@ -28,8 +28,8 @@ const Navbar = (props) => {
     const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
     return (
         <>
-        <nav className="nav-wrapper">
-            <div className="container">
+        <nav className="nav-wrapper" style={{'background-color':'rgba(21, 21, 21, 1)'}}>
+            <div className="container" >
                 <Link to='/' className="brand-logo"></Link>
                
                 {/* <CartIcon/> */}

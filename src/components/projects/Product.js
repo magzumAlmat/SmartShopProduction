@@ -33,7 +33,7 @@ class Product extends Component {
     // console.log('item from addClick 111111111111111111',addItem)
     const { showCart } = this.props;
     console.log('after button clicked to that ------',showCart)
-    showCart(product);
+    // showCart(product);
     
  
   };
@@ -131,11 +131,12 @@ class Product extends Component {
              
 
             </CardText>
+          
             <Button
                 className="btn-custom"
                 onClick={this.addClick.bind(this, product)}>
                 В корзину
-              </Button>
+             </Button>
              
             
 
